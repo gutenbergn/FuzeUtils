@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = 'This repository is meant to store several helper classes and extensions that are used in Fuze\'s personal projects.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+FuzeUtils is a repository used by Fuze internally for easy access to several helper classes and extensions that are used throughout our apps. Please see the README file for more details.
                        DESC
 
   s.homepage         = 'https://github.com/gutenbergn/FuzeUtils'
@@ -16,12 +16,4 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'FuzeUtils/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'FuzeUtils' => ['FuzeUtils/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  #s.frameworks = 'MediaPlayer'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
