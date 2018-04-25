@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension String {
-    func getSize(font: UIFont, sizeConstraint: CGSize, padding: Int = 0) -> CGSize {
+public extension String {
+    public func getSize(font: UIFont, sizeConstraint: CGSize, padding: Int = 0) -> CGSize {
         let paddedString = self.getPaddedString(padding: padding)
         
         let attributes = [NSAttributedStringKey.font: font]

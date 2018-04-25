@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIViewController {
-    func bringWindowLevelToFront(hideStatusBar: Bool, shouldResetAfterDelay: TimeInterval? = nil) {
+public extension UIViewController {
+    public func bringWindowLevelToFront(hideStatusBar: Bool, shouldResetAfterDelay: TimeInterval? = nil) {
         guard let window = UIApplication.shared.delegate?.window else {
             return
         }

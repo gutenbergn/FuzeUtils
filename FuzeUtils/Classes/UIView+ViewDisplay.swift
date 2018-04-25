@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
     static let kDefaultAnimationTime = TimeInterval(0.25)
     
-    func animateDisplay(animationDuration: TimeInterval = kDefaultAnimationTime) {
+    public func animateDisplay(animationDuration: TimeInterval = kDefaultAnimationTime) {
         guard self.isHidden else {
             return
         }
@@ -27,7 +27,7 @@ extension UIView {
         }
     }
     
-    func animateHiding(animationDuration: TimeInterval = kDefaultAnimationTime,
+    public func animateHiding(animationDuration: TimeInterval = kDefaultAnimationTime,
                            shouldRemoveFromSuperview: Bool = false) {
         guard !self.isHidden else {
             return

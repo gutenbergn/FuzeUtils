@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIPageViewController {
-    func getUnderlyingScrollView() -> UIScrollView? {
+public extension UIPageViewController {
+    public func getUnderlyingScrollView() -> UIScrollView? {
         for view in self.view.subviews {
             if let scrollView = view as? UIScrollView {
                 return scrollView

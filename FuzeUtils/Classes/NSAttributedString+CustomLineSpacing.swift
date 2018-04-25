@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension NSAttributedString {
-    static func getCustomLineSpacedAttributedString(text: String, font: UIFont, textColor: UIColor, lineSpacing: CGFloat,
+public extension NSAttributedString {
+    public static func getCustomLineSpacedAttributedString(text: String, font: UIFont, textColor: UIColor, lineSpacing: CGFloat,
                                                     shouldTruncateTail: Bool = false) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.maximumLineHeight = lineSpacing

@@ -9,8 +9,8 @@
 import UIKit
 import MediaPlayer
 
-extension UIViewController {
-    func registerUserActivity(activityType: String, contentIdentifier: String) {
+public extension UIViewController {
+    public func registerUserActivity(activityType: String, contentIdentifier: String) {
         guard #available(iOS 10.1, *),
             let bundleIdentifier = Bundle.main.bundleIdentifier else {
                 return

@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIView {
-    @discardableResult func addUnderline(color: CGColor, height: CGFloat,
+public extension UIView {
+    @discardableResult public func addUnderline(color: CGColor, height: CGFloat,
                                          offset: CGFloat = 0, width: CGFloat? = nil) -> CALayer {
         let underline = CALayer()
         underline.backgroundColor = color

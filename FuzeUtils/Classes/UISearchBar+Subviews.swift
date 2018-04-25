@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UISearchBar {
-    var cancelButton: UIButton? {
+public extension UISearchBar {
+    public var cancelButton: UIButton? {
         for subView1 in subviews {
             for subView2 in subView1.subviews {
                 if let cancelButton = subView2 as? UIButton {
@@ -20,7 +20,7 @@ extension UISearchBar {
         return nil
     }
     
-    var textField: UITextField? {
+    public var textField: UITextField? {
         return self.value(forKey: "searchField") as? UITextField
     }
 }

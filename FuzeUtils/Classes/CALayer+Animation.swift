@@ -8,8 +8,8 @@
 
 import QuartzCore
 
-extension CALayer {
-    func addFadeAnimation(animationTime: CFTimeInterval,
+public extension CALayer {
+    public func addFadeAnimation(animationTime: CFTimeInterval,
                           timingFunction: CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)) {
         let animationTransition = CATransition()
         animationTransition.duration = animationTime

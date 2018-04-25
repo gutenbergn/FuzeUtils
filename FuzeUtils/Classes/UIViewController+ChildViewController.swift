@@ -8,20 +8,20 @@
 
 import UIKit
 
-extension UIViewController {
-    func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView) {
+public extension UIViewController {
+    public func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView) {
         // adds the child view controller as a subview [GN]
         self.addChildViewController(childViewController)
         toView.addSubviewSetupConstraints(childViewController.view, constraintSuperview: self.view)
         childViewController.didMove(toParentViewController: self)
     }
     
-    func removeChildViewControllerAndView(_ childViewController: UIViewController) {
+    public func removeChildViewControllerAndView(_ childViewController: UIViewController) {
         childViewController.view.removeFromSuperview()
         childViewController.removeFromParentViewController()
     }
     
-    func presentFaded(_ viewControllerToPresent: UIViewController, duration: TimeInterval,
+    public func presentFaded(_ viewControllerToPresent: UIViewController, duration: TimeInterval,
                  completion: (() -> Swift.Void)? = nil) {
         guard let mainWindow = UIApplication.shared.windows.first else {
             return
@@ -37,7 +37,7 @@ extension UIViewController {
 }
 
 extension UIView {
-    func addSubviewSetupConstraints(_ subview: UIView, constraintSuperview: UIView? = nil) {
+    public func addSubviewSetupConstraints(_ subview: UIView, constraintSuperview: UIView? = nil) {
         self.addSubview(subview)
         
         // adds constraints that will make the child view follow the same frame as its container [GN]

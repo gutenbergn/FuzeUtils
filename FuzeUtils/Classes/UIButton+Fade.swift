@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIButton {
-    func setTitleWithFade(title: String, duration: TimeInterval = 0.25) {
+public extension UIButton {
+    public func setTitleWithFade(title: String, duration: TimeInterval = 0.25) {
         UIView.transition(with: self, duration: duration, options: .transitionCrossDissolve, animations: {
             self.setTitle(title, for: .normal)
         }, completion: nil)

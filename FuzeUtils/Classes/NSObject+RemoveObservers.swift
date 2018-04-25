@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension NSObject {
-    func removeAllObservers() {
+public extension NSObject {
+    public func removeAllObservers() {
         NotificationCenter.default.removeObserver(self)
     }
 }
