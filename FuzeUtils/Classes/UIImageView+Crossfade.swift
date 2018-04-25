@@ -1,0 +1,17 @@
+//
+//  UIImageView+Crossfade.swift
+//  VHX
+//
+//  Created by Gutenberg Neto on 02/10/17.
+//  Copyright © 2017 Fuze. All rights reserved.
+//
+
+import UIKit
+
+extension UIImageView {
+    func animateCrossfade(image: UIImage, duration: TimeInterval = 0.3) {
+        UIView.transition(with: self, duration: TimeInterval(duration), options: .transitionCrossDissolve, animations: {
+            self.image = image
+        }, completion: nil)
+    }
+}
