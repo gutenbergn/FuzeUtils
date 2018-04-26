@@ -3,6 +3,24 @@ This repository is meant to store several helper classes and extensions that are
 
 In many cases, the files contain code that has been taken from several sources, like Stack Overflow, and modified by us so as to be more easily embedded in our apps. We did our best to reference the original source whenever appropriate, but if we missed something please feel free to leave a note.
 
+## Installation
+
+You can use CocoaPods (https://cocoapods.org/) to install `FuzeUtils`. If you don't have CocoaPods configured on your project yet, please refer to the CocoaPods Guides (https://guides.cocoapods.org/using/using-cocoapods.html).
+
+Next, add the library to your Podfile:
+```
+pod 'FuzeUtils'
+```
+
+Then, run the command:
+```shell
+$ pod install
+```
+
+Once CocoaPods is integrated with your project, make sure to always run your project using the `.xcworkspace` file instead of `.xcodeproj`.
+
+Alternatively, you can just download the source code and add the specific source files that you want to use in your project.
+
 ## Available files
 * **CALayer+Animation**
 Adds an `addFadeAnimation` to implement a fade behavior in a `CALayer`. This can be used, for instance, for changing the text of an `UILabel` with a fade animation. 
