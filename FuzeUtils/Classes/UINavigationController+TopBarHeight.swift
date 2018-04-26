@@ -9,6 +9,10 @@ import Foundation
 
 @objc public extension UINavigationController {
     @objc public func topBarHeight() -> CGFloat {
-        return self.navigationBar.frame.size.height + UIApplication.shared.statusBarFrame.height
+        var statusBarHeight: CGFloat = 0
+        #if os(iOS)
+        statusBarHeight = UIApplication.shared.statusBarFrame.height
+        #endif
+        return self.navigationBar.frame.size.height + statusBarHeight
     }
 }

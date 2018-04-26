@@ -9,6 +9,7 @@ import UIKit
 
 public extension UIViewController {
     public func bringWindowLevelToFront(hideStatusBar: Bool, shouldResetAfterDelay: TimeInterval? = nil) {
+        #if os(iOS)
         guard let window = UIApplication.shared.delegate?.window else {
             return
         }
@@ -22,6 +23,7 @@ public extension UIViewController {
                 UIApplication.shared.isStatusBarHidden = !hideStatusBar
             }
         }
+        #endif
     }
 }
 
