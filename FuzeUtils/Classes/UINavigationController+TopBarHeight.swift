@@ -8,8 +8,8 @@
 
 import Foundation
 
-public extension UINavigationController {
-    public func topBarHeight() -> CGFloat {
+@objc public extension UINavigationController {
+    @objc public func topBarHeight() -> CGFloat {
         return self.navigationBar.frame.size.height + UIApplication.shared.statusBarFrame.height
     }
 }
