@@ -1,6 +1,5 @@
 //
 //  UIView+LoadFromNib.swift
-//  VHX
 //
 //  Created by Daniel Ramos on 10/3/17.
 //  Copyright © 2017 Fuze. All rights reserved.

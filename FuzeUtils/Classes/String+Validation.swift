@@ -1,6 +1,5 @@
 //
 //  String+Validation.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 25/08/17.
 //  Copyright © 2017 Fuze. All rights reserved.

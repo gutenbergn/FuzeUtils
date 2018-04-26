@@ -1,6 +1,5 @@
 //
 //  String+Version.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 10/04/18.
 //  Copyright © 2018 Fuze. All rights reserved.

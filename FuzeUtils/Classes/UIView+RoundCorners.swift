@@ -1,6 +1,5 @@
 //
 //  UIView+RoundCorners.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 14/09/17.
 //  Copyright © 2017 Fuze. All rights reserved.

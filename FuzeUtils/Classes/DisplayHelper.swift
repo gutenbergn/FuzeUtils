@@ -1,6 +1,5 @@
 //
 //  DisplayHelper.swift
-//  VHX
 //
 //  Created by Daniel Ramos on 5/16/17.
 //  Copyright © 2017 Fuze. All rights reserved.

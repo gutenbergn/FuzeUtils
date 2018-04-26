@@ -1,6 +1,5 @@
 //
 //  UIViewController+StatusBarWindowLevel.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 12/01/18.
 //  Copyright © 2017 Fuze. All rights reserved.

@@ -1,6 +1,5 @@
 //
 //  NSAttributedString+CustomLineSpacing.swift
-//  VHX
 //
 //  Created by Daniel Ramos on 10/16/17.
 //  Copyright © 2017 Fuze. All rights reserved.

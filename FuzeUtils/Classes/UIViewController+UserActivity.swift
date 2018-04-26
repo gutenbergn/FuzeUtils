@@ -1,6 +1,5 @@
 //
 //  UIViewController+UserActivity.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 28/11/17.
 //  Copyright © 2017 Fuze. All rights reserved.

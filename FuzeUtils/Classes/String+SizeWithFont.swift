@@ -1,6 +1,5 @@
 //
 //  String+SizeWithFont.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 10/04/17.
 //  Copyright © 2017 Fuze. All rights reserved.

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B50D54B5E17EA2F5BA71CF4CB61FE675"
+               BlueprintIdentifier = "F135339818044783DB170EA536466D1B"
                BlueprintName = "FuzeUtils"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "FuzeUtils.framework">

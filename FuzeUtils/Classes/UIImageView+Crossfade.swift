@@ -1,6 +1,5 @@
 //
 //  UIImageView+Crossfade.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 02/10/17.
 //  Copyright © 2017 Fuze. All rights reserved.

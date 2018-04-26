@@ -1,6 +1,5 @@
 //
 //  UIImage+Color.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 26/05/17.
 //  Copyright © 2017 Fuze. All rights reserved.

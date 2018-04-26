@@ -1,6 +1,5 @@
 //
 //  UIColor+Brightness.swift
-//  VHX
 //
 //  Created by Daniel Ramos on 2/23/18.
 //  Copyright © 2018 Fuze. All rights reserved.

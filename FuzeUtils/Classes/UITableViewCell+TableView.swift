@@ -1,6 +1,5 @@
 //
 //  UITableViewCell+TableView.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 18/10/17.
 //  Copyright © 2017 Fuze. All rights reserved.

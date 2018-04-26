@@ -1,6 +1,5 @@
 //
 //  UIViewController+ChildViewController.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 03/08/17.
 //  Copyright © 2017 Fuze. All rights reserved.

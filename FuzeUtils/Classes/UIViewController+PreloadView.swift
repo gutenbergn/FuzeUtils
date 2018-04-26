@@ -1,6 +1,5 @@
 //
 //  UIViewController+PreloadView.swift
-//  VHX
 //
 //  Created by Gutenberg Neto on 09/08/17.
 //  Copyright © 2017 Fuze. All rights reserved.

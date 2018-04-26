@@ -1,6 +1,5 @@
 //
 //  String+FirstLetterCapitalization.swift
-//  VHX
 //
 //  Created by Daniel Ramos on 3/22/18.
 //  Copyright © 2018 Fuze. All rights reserved.
