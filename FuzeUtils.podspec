@@ -14,6 +14,7 @@ FuzeUtils is a repository used by Fuze internally for easy access to several hel
   s.social_media_url = 'https://twitter.com/gutenbergn'
 
   s.ios.deployment_target = '9.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source_files = 'FuzeUtils/Classes/**/*'
 end
