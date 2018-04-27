@@ -116,4 +116,4 @@ Swift 4.0+
 CocoaPods 1.1.0+
 
 ## License
-`VimeoPlayer` is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+`FuzeUtils` is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
