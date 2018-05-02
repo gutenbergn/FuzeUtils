@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView,
                                                 presentingAnimationDuration: TimeInterval = 0) {
         // adds the child view controller as a subview [GN]
@@ -29,10 +29,24 @@ extension UIViewController {
             childViewController.removeFromParentViewController()
         }
     }
+
+    public func presentFaded(_ viewControllerToPresent: UIViewController, duration: TimeInterval,
+                 completion: (() -> Swift.Void)? = nil) {
+        guard let mainWindow = UIApplication.shared.windows.first else {
+            return
+        }
+        
+        let transition = CATransition()
+        transition.duration = duration
+        transition.type = kCATransitionFade
+        transition.subtype = kCATransitionFromBottom
+        mainWindow.layer.add(transition, forKey: kCATransition)
+        self.present(viewControllerToPresent, animated: false, completion: completion)
+    }
 }
 
 extension UIView {
-    func addSubviewSetupConstraints(_ subview: UIView, constraintSuperview: UIView? = nil) {
+    public func addSubviewSetupConstraints(_ subview: UIView, constraintSuperview: UIView? = nil) {
         self.addSubview(subview)
         
         // adds constraints that will make the child view follow the same frame as its container [GN]
