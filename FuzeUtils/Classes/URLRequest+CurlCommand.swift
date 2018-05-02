@@ -1,9 +1,8 @@
 //
 //  URLRequest+CurlCommand.swift
-//  Honest Account
 //
 //  Created by Felipe Lacet on 26/04/18.
-//  Copyright © 2018 Honest Account. All rights reserved.
+//  Copyright © 2018 Fuze. All rights reserved.
 //
 
 import Foundation
