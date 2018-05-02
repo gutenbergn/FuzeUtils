@@ -61,9 +61,6 @@ Returns a string containing the app's version in an easy format for user display
 * **UIButton+Fade**
 Allows the button title to be updated with a fade animation.
 
-* **UIButton+RoundedBackgroundImage**
-Displays a button with a rounded colored image.
-
 * **UIButton+Subtitle**
 Displays a button with both a title and a subtitle.
 
