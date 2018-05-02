@@ -61,6 +61,9 @@ Returns a string containing the app's version in an easy format for user display
 * **UIButton+Fade**
 Allows the button title to be updated with a fade animation.
 
+* **UIButton+RoundedBackgroundImage**
+Displays a button with a rounded colored image.
+
 * **UIButton+Subtitle**
 Displays a button with both a title and a subtitle.
 
@@ -81,6 +84,9 @@ Adds access to the underlying scroll view of an `UIPageViewController`.
 
 * **UISearchBar+Subviews**
 Adds access to the cancel button and text field of `UISearchBar`.
+
+* **UITabBarItem+Custom**
+Configures a `UITabBarItem` with images for states.
 
 * **UITableViewCell+TableView**
 Returns the container table view in which the `UITableViewCell` is included.
@@ -111,6 +117,9 @@ Brings the screen to front by changing the status bar window level.
 
 * **UIViewController+UserActivity**
 Easily registers the user activity for TV App support.
+
+* **URLRequest+CurlCommand**
+Returns a Curl command for an URLRequest.
 
 ## Requirements
 iOS 9.0+  
