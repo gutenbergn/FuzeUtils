@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FZDateFormatter {
+public class FZDateFormatter {
     
-    static func getFormattedDateString(date: Date, outputDateFormat: String, locale: String? = nil,
+    public static func getFormattedDateString(date: Date, outputDateFormat: String, locale: String? = nil,
                                        amSymbol: String? = nil, pmSymbol: String? = nil) -> String {
         
         let outputDateFormatter = DateFormatter()
@@ -29,7 +29,7 @@ class FZDateFormatter {
         return outputDateFormatter.string(from: date)
     }
     
-    static func convertDateFormat(dateString: String, inputDateFormat: String, outputDateFormat: String,
+    public static func convertDateFormat(dateString: String, inputDateFormat: String, outputDateFormat: String,
                                         locale: String? = nil, amSymbol: String? = nil,
                                         pmSymbol: String? = nil) -> String {
         

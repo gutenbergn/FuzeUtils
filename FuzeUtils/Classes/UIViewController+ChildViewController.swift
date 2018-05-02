@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIViewController {
-    func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView,
+    public func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView,
                                                 presentingAnimationDuration: TimeInterval = 0) {
         // adds the child view controller as a subview [GN]
         childViewController.view.alpha = 0
@@ -20,7 +20,7 @@ public extension UIViewController {
         }, completion: nil)
     }
     
-    func removeChildViewControllerAndView(_ childViewController: UIViewController,
+    public func removeChildViewControllerAndView(_ childViewController: UIViewController,
                                           dismissAnimationDuration: TimeInterval = 0) {
         UIView.animate(withDuration: dismissAnimationDuration, animations: {
             childViewController.view.alpha = 0.0
