@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension URLRequest {
+public extension URLRequest {
     
     public func curl(pretty: Bool = false) -> String {
         
