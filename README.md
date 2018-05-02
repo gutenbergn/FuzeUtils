@@ -28,6 +28,9 @@ Adds an `addFadeAnimation` to implement a fade behavior in a `CALayer`. This can
 * **DisplayHelper**
 This is a helper class for dealing with various screen-related matters ranging from getting the width or height of the screen to identifying the current device.
 
+* **FZDateFormatter**
+This is a helper class for changing a `Date` or a `String` date from one format to other.
+
 * **NSAttributedString+CustomLineSpacing**
 Allows for an `NSAttributedString` to be created with a custom line spacing.
 

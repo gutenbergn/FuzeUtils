@@ -8,18 +8,28 @@
 import UIKit
 
 public extension UIViewController {
-    public func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView) {
+    public func addChildViewControllerSetupConstraints(_ childViewController: UIViewController, toView: UIView,
+                                                presentingAnimationDuration: TimeInterval = 0) {
         // adds the child view controller as a subview [GN]
+        childViewController.view.alpha = 0
         self.addChildViewController(childViewController)
         toView.addSubviewSetupConstraints(childViewController.view, constraintSuperview: self.view)
         childViewController.didMove(toParentViewController: self)
+        UIView.animate(withDuration: presentingAnimationDuration, animations: {
+            childViewController.view.alpha = 1.0
+        }, completion: nil)
     }
     
-    public func removeChildViewControllerAndView(_ childViewController: UIViewController) {
-        childViewController.view.removeFromSuperview()
-        childViewController.removeFromParentViewController()
+    public func removeChildViewControllerAndView(_ childViewController: UIViewController,
+                                          dismissAnimationDuration: TimeInterval = 0) {
+        UIView.animate(withDuration: dismissAnimationDuration, animations: {
+            childViewController.view.alpha = 0.0
+        }) { _ in
+            childViewController.view.removeFromSuperview()
+            childViewController.removeFromParentViewController()
+        }
     }
-    
+
     public func presentFaded(_ viewControllerToPresent: UIViewController, duration: TimeInterval,
                  completion: (() -> Swift.Void)? = nil) {
         guard let mainWindow = UIApplication.shared.windows.first else {
