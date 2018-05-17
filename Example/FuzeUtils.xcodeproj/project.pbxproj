@@ -110,7 +110,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				7BCD30DD773EBDB9B1C7844C /* [CP] Embed Pods Frameworks */,
-				4B6A76DA7F227C5476D8450A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,21 +170,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B6A76DA7F227C5476D8450A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuzeUtils_Tests/Pods-FuzeUtils_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		55D584414CF6AD483C44B424 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
