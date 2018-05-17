@@ -94,6 +94,9 @@ Loads an `UIView` from a specified nib file.
 * **UIView+ParentViewController**
 Returns the container view controller in which the `UIView` is included.
 
+* **UIView+RemoveGestureRecognizers**
+Allows all gesture recognizers to be removed from a view with a single method call.
+
 * **UIView+RoundCorners**
 Adds rounded corners to an `UIView`.
 
