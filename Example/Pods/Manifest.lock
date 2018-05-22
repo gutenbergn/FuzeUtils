@@ -1,5 +1,5 @@
 PODS:
-  - FuzeUtils (0.1.7)
+  - FuzeUtils (0.1.8)
 
 DEPENDENCIES:
   - FuzeUtils (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FuzeUtils: 723d9b249d653e682e1045bcd9cfa5a5c9c6eb6c
+  FuzeUtils: 66b885981a3dc0e5d807e8266fb6ccf05a4af21e
 
 PODFILE CHECKSUM: b849434d60d2bc5ca712f0b8823086f336c2e54a
 
