@@ -58,6 +58,9 @@ Adds 2 validation methods: `isEmpty` for checking if a string is empty or not (t
 * **String+Version**
 Returns a string containing the app's version in an easy format for user display.
 
+* **UIApplication+TopViewController**
+Returns the topmost view controller.
+
 * **UIButton+Fade**
 Allows the button title to be updated with a fade animation.
 
