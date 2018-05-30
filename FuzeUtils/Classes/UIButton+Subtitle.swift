@@ -8,7 +8,8 @@
 import UIKit
 
 public extension UIButton {
-    public func setTitle(_ title: String, titleFont: UIFont, subtitle: String, subtitleFont: UIFont,
+    public func setTitle(_ title: String, titleFont: UIFont, titleColor: UIColor? = nil,
+                         subtitle: String, subtitleFont: UIFont, subtitleColor: UIColor? = nil,
                          lineSpacing: CGFloat = 8, for state: UIControlState = .normal) {
         guard !title.isEmpty, !subtitle.isEmpty else {
             return
@@ -29,6 +30,16 @@ public extension UIButton {
                                            range: NSMakeRange(title.count + 1, subtitle.count))
         mutableAttributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: separatorParagraphStyle,
                                            range: NSMakeRange(0, text.count))
+        
+        if let titleColor = titleColor {
+            mutableAttributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: titleColor,
+                                               range: NSMakeRange(0, title.count))
+        }
+        
+        if let subtitleColor = subtitleColor {
+            mutableAttributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: subtitleColor,
+                                               range: NSMakeRange(title.count + 1, subtitle.count))
+        }
         
         self.setAttributedTitle(mutableAttributedText, for: state)
     }
