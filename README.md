@@ -41,7 +41,10 @@ Makes the `range` method of the `NSMutableAttributedString` available to an `NSA
 Easily remove all observers from an object.
 
 * **NSString+StripCurrency**
-To be used with currncy strings to get only the actual amount. 
+To be used with currency strings to get only the actual amount.
+
+* **SKProduct+TrialDuration**
+Returns the trial duration of the product in days.
 
 * **String+FirstLetterCapitalization**
 Capitalizes *only* the first letter of a given string.
@@ -69,6 +72,9 @@ Displays a button with both a title and a subtitle.
 
 * **UIColor+Brightness**
 Based on a given color, can return it darkened or lightened by a specified multiplier.
+
+* **UIGestureRecognizer+Cancel**
+Adds the option to cancel a gesture recognizer current interaction.
 
 * **UIImage+Color**
 This extension implements a static method to return an image from a given color and a method to tint an image.
