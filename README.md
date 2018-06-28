@@ -82,6 +82,9 @@ This extension implements a static method to return an image from a given color 
 * **UIImageView+Crossfade**
 Crossfades a new image into the `UIImageView`.
 
+* **UILabel+Fade**
+Allows the label text to be updated with a fade animation.
+
 * **UINavigationController+TopBarHeight**
 Returns the top bar height including the status bar.
 
