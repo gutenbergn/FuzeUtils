@@ -25,6 +25,9 @@ Alternatively, you can just download the source code and add the specific source
 * **CALayer+Animation**
 Adds an `addFadeAnimation` to implement a fade behavior in a `CALayer`. This can be used, for instance, for changing the text of an `UILabel` with a fade animation. 
 
+* **Date+DateDifference**
+Provides an easier way to get the difference between 2 Date objects in several different time periods. 
+
 * **DisplayHelper**
 This is a helper class for dealing with various screen-related matters ranging from getting the width or height of the screen to identifying the current device.
 
