@@ -40,6 +40,9 @@ Allows for an `NSAttributedString` to be created with a custom line spacing.
 * **NSAttributedString+Range**
 Makes the `range` method of the `NSMutableAttributedString` available to an `NSAttributedString`.
 
+* **NSLayoutConstraint+Multiplier**
+Allows the multiplier of a constant to be changed (this actually creates a new constraint with the same properties as the original but a different multiplier value).
+
 * **NSObject+RemoveObservers**
 Easily remove all observers from an object.
 
