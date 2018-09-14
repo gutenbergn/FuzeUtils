@@ -42,7 +42,7 @@ public final class Display {
             return .iphone6
         } else if phone && maxLength == 736 {
             return .iphone6plus
-        } else if phone && maxLength == 812 {
+        } else if phone {
             return .iphoneX
         }
         return .unknown
