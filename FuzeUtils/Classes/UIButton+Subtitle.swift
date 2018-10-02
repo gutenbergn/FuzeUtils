@@ -19,7 +19,7 @@ public extension UIButton {
         
         let separatorParagraphStyle = NSMutableParagraphStyle()
         separatorParagraphStyle.lineSpacing = lineSpacing
-        separatorParagraphStyle.alignment = .center
+        separatorParagraphStyle.alignment = self.getParagraphAlignment()
         
         let text = "\(title)\n\(subtitle)"
         
@@ -42,5 +42,18 @@ public extension UIButton {
         }
         
         self.setAttributedTitle(mutableAttributedText, for: state)
+    }
+    
+    private func getParagraphAlignment() -> NSTextAlignment {
+        switch self.contentHorizontalAlignment {
+        case .center:
+            return .center
+        case .leading, .left:
+            return .left
+        case .trailing, .right:
+            return .right
+        case .fill:
+            return .justified
+        }
     }
 }
