@@ -36,6 +36,7 @@ public final class Display {
         max(Display.height, Display.width) == 1366 }
     public class var carplay: Bool { return UIDevice.current.userInterfaceIdiom == .carPlay }
     public class var tv: Bool { return UIDevice.current.userInterfaceIdiom == .tv }
+    public class var hasNotch: Bool { return Display.typeIsLike == .iphoneX || Display.typeIsLike == .iphoneXR }
     public class var typeIsLike: DisplayType {
         if phone && maxLength < 568 {
             return .iphone4
