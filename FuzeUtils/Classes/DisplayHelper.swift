@@ -18,6 +18,9 @@ public enum DisplayType {
     static let iphone7 = iphone6
     static let iphone7plus = iphone6plus
     case iphoneX
+    case iphoneXR
+    static let iphoneXSMax = iphoneXR
+
 }
 
 public final class Display {
@@ -33,6 +36,7 @@ public final class Display {
         max(Display.height, Display.width) == 1366 }
     public class var carplay: Bool { return UIDevice.current.userInterfaceIdiom == .carPlay }
     public class var tv: Bool { return UIDevice.current.userInterfaceIdiom == .tv }
+    public class var hasNotch: Bool { return Display.typeIsLike == .iphoneX || Display.typeIsLike == .iphoneXR }
     public class var typeIsLike: DisplayType {
         if phone && maxLength < 568 {
             return .iphone4
@@ -42,6 +46,8 @@ public final class Display {
             return .iphone6
         } else if phone && maxLength == 736 {
             return .iphone6plus
+        } else if phone && maxLength == 896 {
+            return .iphoneXR
         } else if phone {
             return .iphoneX
         }
