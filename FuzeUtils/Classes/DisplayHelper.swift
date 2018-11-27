@@ -18,6 +18,9 @@ public enum DisplayType {
     static let iphone7 = iphone6
     static let iphone7plus = iphone6plus
     case iphoneX
+    case iphoneXR
+    static let iphoneXSMax = iphoneXR
+
 }
 
 public final class Display {
@@ -42,6 +45,8 @@ public final class Display {
             return .iphone6
         } else if phone && maxLength == 736 {
             return .iphone6plus
+        } else if phone && maxLength == 896 {
+            return .iphoneXR
         } else if phone {
             return .iphoneX
         }
