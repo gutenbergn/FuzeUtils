@@ -11,7 +11,7 @@ public extension UIImage {
     public func scaled(to newSize: CGSize) -> UIImage {
         let rect = CGRect(origin: .zero, size: newSize)
         
-        if #available(iOS 10.0, *) {
+        if #available(iOS 10.0, tvOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: newSize)
             
             return renderer.image { _ in
