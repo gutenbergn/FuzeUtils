@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIView {
-    public func parentViewController() -> UIViewController? {
+    func parentViewController() -> UIViewController? {
         var responder: UIResponder? = self
         while !(responder is UIViewController) {
             responder = responder?.next

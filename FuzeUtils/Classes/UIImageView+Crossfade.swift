@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIImageView {
-    public func animateCrossfade(image: UIImage, duration: TimeInterval = 0.3) {
+    func animateCrossfade(image: UIImage, duration: TimeInterval = 0.3) {
         UIView.transition(with: self, duration: TimeInterval(duration), options: .transitionCrossDissolve, animations: {
             self.image = image
         }, completion: nil)

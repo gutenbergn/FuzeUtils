@@ -10,7 +10,7 @@ import UIKit
 @objc public extension UIImage {
     // based on an answer to a Stack Overflow question:
     // https://stackoverflow.com/questions/26542035/create-uiimage-with-solid-color-in-swift [GN]
-    @objc public static func image(color: UIColor) -> UIImage? {
+    @objc static func image(color: UIColor) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         var colorImage: UIImage?
         
@@ -25,8 +25,8 @@ import UIKit
     
     // based on an answer to a Stack Overflow question:
     // https://stackoverflow.com/questions/45327625/changing-the-tint-of-the-image-in-swift [GN]
-    @objc public func tinted(tintColor: UIColor) -> UIImage {
-        var alwaysTemplateImage = self.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+    @objc func tinted(tintColor: UIColor) -> UIImage {
+        var alwaysTemplateImage = self.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         tintColor.set()
         alwaysTemplateImage.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))

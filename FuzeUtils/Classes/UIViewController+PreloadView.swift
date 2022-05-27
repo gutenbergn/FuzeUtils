@@ -10,12 +10,12 @@ import UIKit
 public extension UIViewController {
     static let kDefaultAnimationTime = TimeInterval(0.25)
     
-    public static func preloadView(viewController: UIViewController) {
+    static func preloadView(viewController: UIViewController) {
         // simply referencing the `view` property will cause the views to load [GN]
         _ = viewController.view
     }
     
-    public static func preloadViews(viewControllers: [UIViewController]) {
+    static func preloadViews(viewControllers: [UIViewController]) {
         for viewController in viewControllers {
             UIViewController.preloadView(viewController: viewController)
         }

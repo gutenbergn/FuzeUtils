@@ -10,7 +10,7 @@ import Foundation
 // based on an answer to a Stack Overflow question:
 // https://stackoverflow.com/questions/38435308/get-lighter-and-darker-color-variations-for-a-given-uicolor [GN]
 public extension UIColor {
-    public func darker(multiplier: CGFloat) -> UIColor {
+    func darker(multiplier: CGFloat) -> UIColor {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0
@@ -25,7 +25,7 @@ public extension UIColor {
         return UIColor()
     }
     
-    public func lighter(multiplier: CGFloat) -> UIColor {
+    func lighter(multiplier: CGFloat) -> UIColor {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0

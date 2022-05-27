@@ -8,7 +8,7 @@
 import Foundation
 
 public extension NSString {
-    public static func stripCurrency(_ string: NSString) -> NSString {
+    static func stripCurrency(_ string: NSString) -> NSString {
         return string.components(separatedBy: CharacterSet(charactersIn: "0123456789.,").inverted).joined(separator: "")
             as NSString
     }

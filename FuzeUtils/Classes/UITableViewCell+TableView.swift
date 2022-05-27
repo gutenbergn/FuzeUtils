@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UITableViewCell {
-    public func getContainerTableView() -> UITableView? {
+    func getContainerTableView() -> UITableView? {
         var view = self.superview
         
         while view != nil && !(view is UITableView) {

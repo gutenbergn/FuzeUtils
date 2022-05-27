@@ -8,7 +8,7 @@
 import Foundation
 
 public extension NSAttributedString {
-    public func range(of string: String) -> NSRange {
+    func range(of string: String) -> NSRange {
         let mutableAttributedString = NSMutableAttributedString(attributedString: self)
         
         return mutableAttributedString.mutableString.range(of: string)

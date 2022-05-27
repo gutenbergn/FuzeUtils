@@ -8,7 +8,7 @@
 import Foundation
 
 public extension String {
-    public static func getVersionString() -> String {
+    static func getVersionString() -> String {
         guard let versionString = Bundle.main.infoDictionary?["CFBundleVersion"] as? String,
             let shortVersionString = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
                 return ""

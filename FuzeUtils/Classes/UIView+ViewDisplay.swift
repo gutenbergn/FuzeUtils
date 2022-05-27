@@ -11,7 +11,7 @@ import UIKit
 public extension UIView {
     static let kDefaultAnimationTime = TimeInterval(0.25)
     
-    public func animateDisplay(animationDuration: TimeInterval = kDefaultAnimationTime) {
+    func animateDisplay(animationDuration: TimeInterval = kDefaultAnimationTime) {
         guard self.isHidden else {
             return
         }
@@ -20,13 +20,13 @@ public extension UIView {
             self.alpha = 0.0
             self.isHidden = false
             UIView.animate(withDuration: animationDuration, delay: 0,
-                           options: UIViewAnimationOptions.curveEaseOut, animations: {
+                           options: UIView.AnimationOptions.curveEaseOut, animations: {
                             self.alpha = 1.0
             }, completion: nil)
         }
     }
     
-    public func animateHiding(animationDuration: TimeInterval = kDefaultAnimationTime,
+    func animateHiding(animationDuration: TimeInterval = kDefaultAnimationTime,
                            shouldRemoveFromSuperview: Bool = false) {
         guard !self.isHidden else {
             return
@@ -34,7 +34,7 @@ public extension UIView {
         
         DispatchQueue.main.async {
             UIView.animate(withDuration: animationDuration, delay: 0,
-                           options: UIViewAnimationOptions.curveEaseOut, animations: {
+                           options: UIView.AnimationOptions.curveEaseOut, animations: {
                             self.alpha = 0.0
             }, completion: { _ in
                 self.isHidden = true

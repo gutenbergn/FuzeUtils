@@ -9,7 +9,7 @@ import Foundation
 
 public extension URLRequest {
     
-    public func curl(pretty: Bool = false) -> String {
+    func curl(pretty: Bool = false) -> String {
         
         var data: String = ""
         let complement = pretty ? "\\\n" : ""

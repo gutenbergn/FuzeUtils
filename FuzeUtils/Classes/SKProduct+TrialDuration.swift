@@ -9,7 +9,7 @@ import Foundation
 import StoreKit
 
 public extension SKProduct {
-    public func getTrialDurationDays() -> Int? {
+    func getTrialDurationDays() -> Int? {
         guard #available(iOS 11.2, tvOS 11.2, *), let period = self.introductoryPrice?.subscriptionPeriod else {
             return nil
         }

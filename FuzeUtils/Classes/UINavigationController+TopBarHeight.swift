@@ -8,7 +8,7 @@
 import Foundation
 
 @objc public extension UINavigationController {
-    @objc public func topBarHeight() -> CGFloat {
+    @objc func topBarHeight() -> CGFloat {
         var statusBarHeight: CGFloat = 0
         #if os(iOS)
         statusBarHeight = UIApplication.shared.statusBarFrame.height

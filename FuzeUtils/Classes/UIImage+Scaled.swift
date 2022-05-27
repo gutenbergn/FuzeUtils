@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIImage {
-    public func scaled(to newSize: CGSize) -> UIImage {
+    func scaled(to newSize: CGSize) -> UIImage {
         let rect = CGRect(origin: .zero, size: newSize)
         
         if #available(iOS 10.0, tvOS 10.0, *) {
@@ -22,7 +22,7 @@ public extension UIImage {
         }
     }
     
-    public func scaled(percentage: CGPoint) -> UIImage {
+    func scaled(percentage: CGPoint) -> UIImage {
         return self.scaled(to: CGSize(width: self.size.width * percentage.x, height: self.size.height * percentage.y))
     }
 }

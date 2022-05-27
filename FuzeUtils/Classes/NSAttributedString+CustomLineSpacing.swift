@@ -8,7 +8,7 @@
 import UIKit
 
 public extension NSAttributedString {
-    public static func getCustomLineSpacedAttributedString(text: String, font: UIFont, textColor: UIColor, lineSpacing: CGFloat,
+    static func getCustomLineSpacedAttributedString(text: String, font: UIFont, textColor: UIColor, lineSpacing: CGFloat,
                                                     shouldTruncateTail: Bool = false) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.maximumLineHeight = lineSpacing
@@ -19,9 +19,9 @@ public extension NSAttributedString {
         }
         
         let textFontAttributes = [
-            NSAttributedStringKey.font: font,
-            NSAttributedStringKey.foregroundColor: textColor,
-            NSAttributedStringKey.paragraphStyle: paragraphStyle
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: textColor,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]
         
         return NSAttributedString(string: text, attributes: textFontAttributes)

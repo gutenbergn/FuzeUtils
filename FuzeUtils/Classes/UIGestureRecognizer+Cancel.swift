@@ -8,7 +8,7 @@
 import Foundation
 
 public extension UIGestureRecognizer {
-    public func cancel() {
+    func cancel() {
         guard self.isEnabled else {
             return
         }

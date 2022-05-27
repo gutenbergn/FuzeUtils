@@ -10,7 +10,7 @@ import Foundation
 // based on an answer to a Stack Overflow question:
 // https://stackoverflow.com/questions/26667009/get-top-most-uiviewcontroller [GN]
 public extension UIApplication {
-    public static func topViewController(
+    static func topViewController(
         controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let navigationController = controller as? UINavigationController {
             return self.topViewController(controller: navigationController.visibleViewController)

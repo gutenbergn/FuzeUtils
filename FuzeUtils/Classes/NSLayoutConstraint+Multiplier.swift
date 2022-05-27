@@ -10,7 +10,7 @@ import UIKit
 public extension NSLayoutConstraint {
     // based on an answer to a Stack Overflow question:
     // https://stackoverflow.com/questions/19593641/can-i-change-multiplier-property-for-nslayoutconstraint [GN]
-    public func setMultiplier(multiplier: CGFloat) -> NSLayoutConstraint? {
+    func setMultiplier(multiplier: CGFloat) -> NSLayoutConstraint? {
         guard let firstItem = self.firstItem else {
             return nil
         }

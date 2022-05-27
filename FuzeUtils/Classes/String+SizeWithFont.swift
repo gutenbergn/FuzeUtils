@@ -8,10 +8,10 @@
 import Foundation
 
 public extension String {
-    public func getSize(font: UIFont, sizeConstraint: CGSize, padding: Int = 0) -> CGSize {
+    func getSize(font: UIFont, sizeConstraint: CGSize, padding: Int = 0) -> CGSize {
         let paddedString = self.getPaddedString(padding: padding)
         
-        let attributes = [NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.font: font]
         let stringRect = (paddedString as NSString).boundingRect(with: sizeConstraint,
                                                          options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                                          attributes: attributes, context: nil)
