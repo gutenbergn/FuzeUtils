@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // this whole class is based on an answer to a Stack Overflow question:
 // https://stackoverflow.com/questions/25780283/ios-how-to-detect-iphone-x-iphone-6-plus-iphone-6-iphone-5-iphone-4-by-macro [GN]
