@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // based on an answer to a Stack Overflow question:
 // https://stackoverflow.com/questions/38435308/get-lighter-and-darker-color-variations-for-a-given-uicolor [GN]

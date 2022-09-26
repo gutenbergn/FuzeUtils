@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public extension String {
     func getSize(font: UIFont, sizeConstraint: CGSize, padding: Int = 0) -> CGSize {
