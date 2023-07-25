@@ -12,7 +12,7 @@ import UIKit
     @objc func topBarHeight() -> CGFloat {
         var statusBarHeight: CGFloat = 0
         #if os(iOS)
-        statusBarHeight = UIApplication.shared.statusBarFrame.height
+        statusBarHeight = UIApplication.getForegroundWindowScene()?.statusBarManager?.statusBarFrame.height ?? 0
         #endif
         return self.navigationBar.frame.size.height + statusBarHeight
     }
