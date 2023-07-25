@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     static func getForegroundWindowScene() -> UIWindowScene? {
         return UIApplication.shared.connectedScenes
             .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene
