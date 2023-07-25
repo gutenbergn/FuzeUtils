@@ -32,7 +32,7 @@ public extension UIViewController {
 
     func presentFaded(_ viewControllerToPresent: UIViewController, duration: TimeInterval,
                  completion: (() -> Swift.Void)? = nil) {
-        guard let mainWindow = UIApplication.shared.windows.first else {
+        guard let mainWindow = UIApplication.getKeyWindow() else {
             return
         }
         

@@ -11,8 +11,14 @@ import UIKit
 // based on an answer to a Stack Overflow question:
 // https://stackoverflow.com/questions/26667009/get-top-most-uiviewcontroller [GN]
 public extension UIApplication {
-    static func topViewController(
-        controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    static func topViewController(controller: UIViewController? = nil) -> UIViewController? {
+        let scene = UIApplication.getForegroundWindowScene()
+        let sceneRootVC = UIApplication.getKeyWindowRootViewController(windowScene: scene)
+        
+        guard let controller = controller ?? sceneRootVC else {
+            return controller
+        }
+        
         if let navigationController = controller as? UINavigationController {
             return self.topViewController(controller: navigationController.visibleViewController)
         }
@@ -23,7 +29,7 @@ public extension UIApplication {
             }
         }
         
-        if let presented = controller?.presentedViewController {
+        if let presented = controller.presentedViewController {
             return self.topViewController(controller: presented)
         }
         
