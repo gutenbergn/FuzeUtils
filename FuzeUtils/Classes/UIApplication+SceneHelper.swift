@@ -15,9 +15,11 @@ extension UIApplication {
             .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene
     }
     
+#if os(iOS)
     static func getForegroundInterfaceOrientation() -> UIInterfaceOrientation {
         return Self.getForegroundWindowScene()?.interfaceOrientation ?? .portrait
     }
+#endif
     
     static func getKeyWindow(windowScene: UIWindowScene? = nil) -> UIWindow? {
         let scene = windowScene ?? Self.getForegroundWindowScene()
