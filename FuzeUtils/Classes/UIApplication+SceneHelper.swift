@@ -10,9 +10,15 @@ import Foundation
 import UIKit
 
 public extension UIApplication {
-    static func getForegroundWindowScene() -> UIWindowScene? {
-        return UIApplication.shared.connectedScenes
+    static func getForegroundWindowScene(allowInactiveSceneAsBackup: Bool = false) -> UIWindowScene? {
+        var windowScene = UIApplication.shared.connectedScenes
             .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene
+        
+        if windowScene == nil && allowInactiveSceneAsBackup {
+            windowScene = UIApplication.shared.connectedScenes
+                .first(where: { $0.activationState != .unattached }) as? UIWindowScene
+        }
+        return windowScene
     }
     
 #if os(iOS)
