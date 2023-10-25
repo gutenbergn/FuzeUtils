@@ -10,7 +10,8 @@ import StoreKit
 
 public extension SKProduct {
     func getTrialDurationDays() -> Int? {
-        guard #available(iOS 11.2, tvOS 11.2, *), let period = self.introductoryPrice?.subscriptionPeriod else {
+        guard #available(iOS 11.2, tvOS 11.2, *), let period = self.introductoryPrice?.subscriptionPeriod,
+              self.introductoryPrice?.price == 0 else {
             return nil
         }
         
