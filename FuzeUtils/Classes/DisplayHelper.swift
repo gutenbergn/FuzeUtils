@@ -61,7 +61,7 @@ public final class Display {
     public class var carplay: Bool { return UIDevice.current.userInterfaceIdiom == .carPlay }
     public class var tv: Bool { return UIDevice.current.userInterfaceIdiom == .tv }
     public class var visionOS: Bool {
-        if #available(iOS 17.0, *) {
+        if #available(iOS 17.0, tvOS 17.0, *) {
             return UIDevice.current.userInterfaceIdiom == .vision
         } else {
             return false
