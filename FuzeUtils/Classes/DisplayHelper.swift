@@ -25,18 +25,48 @@ public enum DisplayType {
 }
 
 public final class Display {
-    public class var width: CGFloat { return UIScreen.main.bounds.size.width }
-    public class var height: CGFloat { return UIScreen.main.bounds.size.height }
+    private static var lastHeight: CGFloat = 0
+    private static var lastWidth: CGFloat = 0
+    
+    public class var width: CGFloat {
+        guard let keyWindow = UIApplication.getKeyWindow() else {
+            return Self.lastWidth
+        }
+        
+        let windowWidth = keyWindow.bounds.size.width
+        
+        Self.lastWidth = windowWidth > 0 ? windowWidth : Self.lastWidth
+        
+        return windowWidth
+    }
+    
+    public class var height: CGFloat {
+        guard let keyWindow = UIApplication.getKeyWindow() else {
+            return Self.lastHeight
+        }
+        
+        let windowHeight = keyWindow.bounds.size.height
+        
+        Self.lastHeight = windowHeight > 0 ? windowHeight : Self.lastHeight
+        
+        return windowHeight
+    }
+    
     public class var maxLength: CGFloat { return max(width, height) }
     public class var minLength: CGFloat { return min(width, height) }
-    public class var zoomed: Bool { return UIScreen.main.nativeScale >= UIScreen.main.scale }
-    public class var retina: Bool { return UIScreen.main.scale >= 2.0 }
     public class var phone: Bool { return UIDevice.current.userInterfaceIdiom == .phone }
     public class var pad: Bool { return UIDevice.current.userInterfaceIdiom == .pad }
     public class var padPro1366: Bool { return UIDevice.current.userInterfaceIdiom == .pad &&
         max(Display.height, Display.width) == 1366 }
     public class var carplay: Bool { return UIDevice.current.userInterfaceIdiom == .carPlay }
     public class var tv: Bool { return UIDevice.current.userInterfaceIdiom == .tv }
+    public class var visionOS: Bool {
+        if #available(iOS 17.0, *) {
+            return UIDevice.current.userInterfaceIdiom == .vision
+        } else {
+            return false
+        }
+    }
     public class var hasNotch: Bool { return Display.typeIsLike == .iphoneX || Display.typeIsLike == .iphoneXR }
     public class var typeIsLike: DisplayType {
         if phone && maxLength < 568 {
