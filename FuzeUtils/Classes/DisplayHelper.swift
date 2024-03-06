@@ -52,6 +52,14 @@ public final class Display {
         return windowHeight
     }
     
+    public class var screenBounds: CGRect {
+        #if !os(visionOS)
+        return UIScreen.main.bounds
+        #else
+        UIApplication.shared.connectedScenes.compactMap { ($0 as? UIWindowScene)?.keyWindow }.last?.bounds ?? .zero
+        #endif
+    }
+    
     public class var maxLength: CGFloat { return max(width, height) }
     public class var minLength: CGFloat { return min(width, height) }
     public class var phone: Bool { return UIDevice.current.userInterfaceIdiom == .phone }
