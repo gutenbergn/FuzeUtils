@@ -56,7 +56,7 @@ public final class Display {
         #if !os(visionOS)
         return UIScreen.main.bounds
         #else
-        UIApplication.shared.connectedScenes.compactMap { ($0 as? UIWindowScene)?.keyWindow }.last?.bounds ?? .zero
+        UIApplication.shared.connectedScenes.compactMap { ($0 as? UIWindowScene)?.keyWindow }.last?.bounds ?? CGRect(x: 0, y: 0, width: 1280, height: 720)
         #endif
     }
     
