@@ -32,7 +32,9 @@ public extension UIViewController {
 
     func presentFaded(_ viewControllerToPresent: UIViewController, duration: TimeInterval,
                  completion: (() -> Swift.Void)? = nil) {
-        guard let mainWindow = UIApplication.getKeyWindow() else {
+        let windowScene = UIApplication.getForegroundWindowScene(allowInactiveSceneAsBackup: true)
+        
+        guard let mainWindow = UIApplication.getKeyWindow(windowScene: windowScene) else {
             return
         }
         

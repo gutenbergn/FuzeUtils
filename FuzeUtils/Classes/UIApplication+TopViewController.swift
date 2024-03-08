@@ -12,7 +12,7 @@ import UIKit
 // https://stackoverflow.com/questions/26667009/get-top-most-uiviewcontroller [GN]
 public extension UIApplication {
     static func topViewController(controller: UIViewController? = nil) -> UIViewController? {
-        let scene = UIApplication.getForegroundWindowScene()
+        let scene = UIApplication.getForegroundWindowScene(allowInactiveSceneAsBackup: true)
         let sceneRootVC = UIApplication.getKeyWindowRootViewController(windowScene: scene)
         
         guard let controller = controller ?? sceneRootVC else {

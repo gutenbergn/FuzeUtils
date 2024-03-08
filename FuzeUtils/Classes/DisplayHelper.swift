@@ -29,7 +29,9 @@ public final class Display {
     private static var lastWidth: CGFloat = 0
     
     public class var width: CGFloat {
-        guard let keyWindow = UIApplication.getKeyWindow() else {
+        let windowScene = UIApplication.getForegroundWindowScene(allowInactiveSceneAsBackup: true)
+        
+        guard let keyWindow = UIApplication.getKeyWindow(windowScene: windowScene) else {
             return Self.lastWidth
         }
         
@@ -41,7 +43,9 @@ public final class Display {
     }
     
     public class var height: CGFloat {
-        guard let keyWindow = UIApplication.getKeyWindow() else {
+        let windowScene = UIApplication.getForegroundWindowScene(allowInactiveSceneAsBackup: true)
+        
+        guard let keyWindow = UIApplication.getKeyWindow(windowScene: windowScene) else {
             return Self.lastHeight
         }
         
