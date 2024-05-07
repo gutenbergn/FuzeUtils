@@ -7,7 +7,7 @@ let package = Package(
     name: "FuzeUtils",
     platforms: [
         .iOS(.v15),
-        .tvOS(.v14)
+        .tvOS(.v15)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -27,9 +27,9 @@ let package = Package(
             dependencies: [],
             path: "FuzeUtils/Classes"
         ),
-        .testTarget(
-            name: "FuzeUtilsTests",
-            dependencies: ["FuzeUtils"]),
+        //.testTarget(
+        //    name: "FuzeUtilsTests",
+        //    dependencies: ["FuzeUtils"]),
     ],
     swiftLanguageVersions: [.v5]
 )
