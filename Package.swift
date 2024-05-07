@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "FuzeUtils",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
         .tvOS(.v14)
     ],
     products: [
