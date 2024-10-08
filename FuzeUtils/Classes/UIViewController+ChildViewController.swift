@@ -48,7 +48,8 @@ public extension UIViewController {
 }
 
 public extension UIView {
-    func addSubviewSetupConstraints(_ subview: UIView, constraintSuperview: UIView? = nil) {
+    func addSubviewSetupConstraints(_ subview: UIView, shouldForceWidthMatch: Bool = false,
+                                    constraintSuperview: UIView? = nil) {
         self.addSubview(subview)
         
         // adds constraints that will make the child view follow the same frame as its container [GN]
@@ -70,16 +71,30 @@ public extension UIView {
                                                   toItem: subview,
                                                   attribute: NSLayoutConstraint.Attribute.bottom,
                                                   multiplier: CGFloat(1), constant: CGFloat(0))
-        let trailingConstraint = NSLayoutConstraint(item: self,
-                                                    attribute: NSLayoutConstraint.Attribute.trailing,
-                                                    relatedBy: NSLayoutConstraint.Relation.equal,
-                                                    toItem: subview,
-                                                    attribute: NSLayoutConstraint.Attribute.trailing,
-                                                    multiplier: CGFloat(1), constant: CGFloat(0))
+        
         self.translatesAutoresizingMaskIntoConstraints = false
         subview.translatesAutoresizingMaskIntoConstraints = false
         
         let constraintSuperview = constraintSuperview ?? self
-        constraintSuperview.addConstraints([topConstraint, leadingConstraint, bottomConstraint, trailingConstraint])
+        
+        if !shouldForceWidthMatch {
+            let trailingConstraint = NSLayoutConstraint(item: self,
+                                                        attribute: NSLayoutConstraint.Attribute.trailing,
+                                                        relatedBy: NSLayoutConstraint.Relation.equal,
+                                                        toItem: subview,
+                                                        attribute: NSLayoutConstraint.Attribute.trailing,
+                                                        multiplier: CGFloat(1), constant: CGFloat(0))
+            
+            constraintSuperview.addConstraints([topConstraint, leadingConstraint, bottomConstraint, trailingConstraint])
+        } else {
+            let widthConstraint = NSLayoutConstraint(item: self,
+                                                     attribute: NSLayoutConstraint.Attribute.width,
+                                                     relatedBy: NSLayoutConstraint.Relation.equal,
+                                                     toItem: subview,
+                                                     attribute: NSLayoutConstraint.Attribute.width,
+                                                     multiplier: CGFloat(1), constant: CGFloat(0))
+            
+            constraintSuperview.addConstraints([topConstraint, leadingConstraint, bottomConstraint, widthConstraint])
+        }
     }
 }
