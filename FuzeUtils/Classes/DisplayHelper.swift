@@ -73,7 +73,7 @@ public final class Display {
     public class var phone: Bool { return UIDevice.current.userInterfaceIdiom == .phone }
     public class var pad: Bool { return UIDevice.current.userInterfaceIdiom == .pad }
     public class var padPro1366: Bool { return UIDevice.current.userInterfaceIdiom == .pad &&
-        max(Display.height, Display.width) == 1366 }
+        max(Display.height, Display.width) >= 1366 }
     public class var carplay: Bool { return UIDevice.current.userInterfaceIdiom == .carPlay }
     public class var tv: Bool { return UIDevice.current.userInterfaceIdiom == .tv }
     public class var visionOS: Bool {
