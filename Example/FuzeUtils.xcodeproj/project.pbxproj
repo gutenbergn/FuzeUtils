@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A42FC65CEE4632AED7E849 /* Pods_FuzeUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB49E77371E928E5C5BFD2F0 /* Pods_FuzeUtils_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
@@ -15,12 +14,9 @@
 		607FACE51AFB9204008FA782 /* FuzeUtils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzeUtils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7E039F6B4FA277B036444171 /* Pods-FuzeUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzeUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuzeUtils_Tests/Pods-FuzeUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B195874392D36531A518D624 /* Pods-FuzeUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzeUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzeUtils_Tests/Pods-FuzeUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C5C0B516230C589D8822627B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DE138419C597797D7BCF86C4 /* FuzeUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FuzeUtils.podspec; path = ../FuzeUtils.podspec; sourceTree = "<group>"; };
 		DF9F37463CB56AEFB1536D8A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EB49E77371E928E5C5BFD2F0 /* Pods_FuzeUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzeUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +24,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A42FC65CEE4632AED7E849 /* Pods_FuzeUtils_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +36,6 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				E6D429251F598148E96512F1 /* Pods */,
-				DFB53FE1905B3CF1869B036C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,23 +74,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		DFB53FE1905B3CF1869B036C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB49E77371E928E5C5BFD2F0 /* Pods_FuzeUtils_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E6D429251F598148E96512F1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7E039F6B4FA277B036444171 /* Pods-FuzeUtils_Tests.debug.xcconfig */,
-				B195874392D36531A518D624 /* Pods-FuzeUtils_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,11 +81,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FuzeUtils_Tests" */;
 			buildPhases = (
-				55D584414CF6AD483C44B424 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				7BCD30DD773EBDB9B1C7844C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,45 +138,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		55D584414CF6AD483C44B424 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FuzeUtils_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BCD30DD773EBDB9B1C7844C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FuzeUtils_Tests/Pods-FuzeUtils_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FuzeUtils/FuzeUtils.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FuzeUtils.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FuzeUtils_Tests/Pods-FuzeUtils_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACE11AFB9204008FA782 /* Sources */ = {
@@ -327,7 +262,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E039F6B4FA277B036444171 /* Pods-FuzeUtils_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -348,7 +282,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B195874392D36531A518D624 /* Pods-FuzeUtils_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -1,6 +1,0 @@
-framework module FuzeUtils {
-  umbrella header "FuzeUtils-umbrella.h"
-
-  export *
-  module * { export * }
-}
