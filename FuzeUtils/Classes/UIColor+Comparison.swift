@@ -9,10 +9,21 @@ import Foundation
 import UIKit
 
 public extension UIColor {
-    func isEqualWithConversion(_ color: UIColor) -> Bool {
-        guard let space = self.cgColor.colorSpace else { return false }
-        guard let converted = color.cgColor.converted(to: space, intent: .absoluteColorimetric,
-                                                      options: nil) else { return false }
-        return self.cgColor == converted
+    func isEqualComponentValues(_ c2: UIColor) -> Bool {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        var red2: CGFloat = 0
+        var green2: CGFloat = 0
+        var blue2: CGFloat = 0
+        var alpha2: CGFloat = 0
+        c2.getRed(&red2, green: &green2, blue: &blue2, alpha: &alpha2)
+        
+        return (Int(red * 255) == Int(red * 255) &&
+                Int(green * 255) == Int(green2 * 255) &&
+                Int(blue * 255) == Int(blue * 255))
     }
 }
