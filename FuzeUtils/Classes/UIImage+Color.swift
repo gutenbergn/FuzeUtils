@@ -10,8 +10,8 @@ import UIKit
 @objc public extension UIImage {
     // based on an answer to a Stack Overflow question:
     // https://stackoverflow.com/questions/26542035/create-uiimage-with-solid-color-in-swift [GN]
-    @objc static func image(color: UIColor) -> UIImage? {
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+    @objc static func image(color: UIColor, width: CGFloat = 1, height: CGFloat = 1) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
         var colorImage: UIImage?
         
         UIGraphicsBeginImageContext(rect.size)

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FuzeUtils'
-  s.version          = '0.6.3'
+  s.version          = '0.6.4'
   s.summary          = 'This repository is meant to store several helper classes and extensions that are used in Fuze\'s personal projects.'
 
   s.description      = <<-DESC
