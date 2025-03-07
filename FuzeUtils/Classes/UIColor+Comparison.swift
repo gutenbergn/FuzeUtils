@@ -22,8 +22,8 @@ public extension UIColor {
         var alpha2: CGFloat = 0
         c2.getRed(&red2, green: &green2, blue: &blue2, alpha: &alpha2)
         
-        return (Int(red * 255) == Int(red * 255) &&
+        return (Int(red * 255) == Int(red2 * 255) &&
                 Int(green * 255) == Int(green2 * 255) &&
-                Int(blue * 255) == Int(blue * 255))
+                Int(blue * 255) == Int(blue2 * 255))
     }
 }
